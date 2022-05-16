@@ -1,0 +1,10 @@
+version: '3'
+services:
+  grapheditor: 
+    image: nginx:latest
+    container_name: grapheditor
+    ports: 
+        - "5000:5000"
+    volumes: 
+        - ./:/etc/nginx/html/
+        - ./nginx.conf:/etc/nginx/nginx.conf
